@@ -1,5 +1,5 @@
-REM   Script: Activity 6 and 8
-REM   activity 6 and 8
+-- REM   Script: Activity 6 and 8
+-- REM   activity 6 and 8
 
 -- Activity 6
 -- Create a table named orders
@@ -47,7 +47,6 @@ select * from orders where purchase_amount between 1000 and 2000
 -- Activity 8
 -- Write an SQL statement to find the highest purchase amount ordered by the each customer with their ID and highest purchase amount.
 Select customer_id, max(purchase_amount) as highest_p_amt from orders group by customer_id, purchase_amount;
-
 
 -- Write an SQL statement to find the highest purchase amount on '2012-08-17' for each salesman with their ID.
 Select salesman_id,order_date, max(purchase_amount) as highest_p_amt from orders where order_date = TO_DATE('2012/08/17', 'YYYY/MM/DD') group by salesman_id,order_date;
